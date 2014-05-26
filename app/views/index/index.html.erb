@@ -1,0 +1,16 @@
+<table class="ui inverted black table segment">
+    <thead>
+        <tr>
+            <th>Item</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @list.each do |item| %>
+        <tr>
+            <td><%= item %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+<%= will_paginate @list, :renderer => PaginationRenderer %>
